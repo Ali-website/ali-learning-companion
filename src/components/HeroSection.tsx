@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { ArrowDown, Robot } from 'lucide-react';
+import { ArrowDown, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
@@ -85,7 +85,7 @@ export const HeroSection = () => {
               className="glass-card p-8 flex items-center gap-4 transform transition-all animate-float"
             >
               <div className="relative w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
-                <Robot className="h-10 w-10 text-primary" />
+                <Bot className="h-10 w-10 text-primary" />
                 <div className="absolute inset-0 rounded-full border-2 border-primary animate-pulse opacity-50"></div>
               </div>
               <div className="flex flex-col">
