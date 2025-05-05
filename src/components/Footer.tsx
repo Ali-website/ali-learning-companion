@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500 mb-4">
+            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-4">
               A-L-I
             </h3>
             <p className="text-muted-foreground max-w-md">
@@ -40,6 +40,16 @@ export const Footer = () => {
                   Products
                 </a>
               </li>
+              <li>
+                <a href="#reviews" className="text-muted-foreground hover:text-primary transition-colors">
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contacts
+                </a>
+              </li>
             </ul>
           </div>
           
@@ -49,11 +59,6 @@ export const Footer = () => {
               <li>
                 <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Help Center
                 </a>
               </li>
               <li>

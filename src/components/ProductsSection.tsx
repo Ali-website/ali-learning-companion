@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const ProductFeature = ({ text }: { text: string }) => (
@@ -114,7 +113,7 @@ export const ProductsSection = () => {
                     <h3 className="text-2xl font-bold mb-3">{product.title}</h3>
                     <p className="text-muted-foreground mb-6">{product.description}</p>
                     
-                    <div className="mb-8">
+                    <div>
                       <h4 className="font-medium mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {product.features.map((feature, index) => (
@@ -122,8 +121,6 @@ export const ProductsSection = () => {
                         ))}
                       </ul>
                     </div>
-                    
-                    <Button>Learn More</Button>
                   </div>
                 </div>
               </TabsContent>

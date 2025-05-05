@@ -1,8 +1,5 @@
 
 import { Mail, Linkedin, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 
 const ContactItem = ({ 
   icon: Icon, 
@@ -37,7 +34,7 @@ export const ContactSection = () => {
           Have questions about A-L-I? We'd love to hear from you.
         </p>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+        <div className="max-w-xl mx-auto mt-12">
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <ContactItem
               icon={Mail}
@@ -54,52 +51,6 @@ export const ContactSection = () => {
               label="Phone"
               placeholder="Will be filled later"
             />
-            
-            <div className="bg-white/50 dark:bg-white/5 rounded-xl p-6 border border-border mt-8">
-              <h3 className="text-lg font-medium mb-3">Office Hours</h3>
-              <p className="text-muted-foreground mb-1">Monday to Friday: 9am - 5pm</p>
-              <p className="text-muted-foreground">Weekends: Closed</p>
-            </div>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 md:p-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <h3 className="text-xl font-bold mb-6">Send us a message</h3>
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <Input id="name" placeholder="Your name" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
-                  <Input id="email" type="email" placeholder="Your email" />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium">
-                  Subject
-                </label>
-                <Input id="subject" placeholder="How can we help you?" />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="Your message"
-                  rows={4}
-                />
-              </div>
-              
-              <Button className="w-full">Send Message</Button>
-            </form>
           </div>
         </div>
       </div>

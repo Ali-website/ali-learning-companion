@@ -1,7 +1,6 @@
 
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Bot } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   const robotRef = useRef<HTMLDivElement>(null);
@@ -21,6 +20,13 @@ export const HeroSection = () => {
     
     return () => clearInterval(interval);
   }, []);
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section 
@@ -58,14 +64,6 @@ export const HeroSection = () => {
               A-L-I, is an AI-powered robot transforming education with engaging conversations and personalized 
               lessons for a fun, effective learning journey at home and school.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-              <Button size="lg" className="animate-pulse-slow">
-                Learn More
-              </Button>
-              <Button variant="outline" size="lg">
-                Watch Demo
-              </Button>
-            </div>
           </div>
           
           <div className="lg:w-1/2 flex flex-col items-center gap-8">
@@ -98,7 +96,10 @@ export const HeroSection = () => {
       </div>
       
       {/* Scroll Down Arrow */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+      <div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce cursor-pointer"
+        onClick={scrollToAbout}
+      >
         <p className="text-sm text-muted-foreground mb-2">Scroll Down</p>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
