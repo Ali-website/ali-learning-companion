@@ -108,7 +108,7 @@ export const ReviewsSection = () => {
   };
 
   return (
-    <section id="reviews" className="py-24">
+    <section id="reviews" className="py-5">
       <div className="section-container">
         <h2 className="section-title animate-fade-in">
           What Our Users Say

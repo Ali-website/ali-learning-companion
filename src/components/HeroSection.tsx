@@ -1,41 +1,40 @@
-
-import { useEffect, useRef } from 'react';
-import { ArrowDown, Bot } from 'lucide-react';
+import { useEffect, useRef } from "react";
+import { ArrowDown, Bot } from "lucide-react";
 
 export const HeroSection = () => {
   const robotRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (robotRef.current) {
-        robotRef.current.classList.add('animate-wiggle');
-        
+        robotRef.current.classList.add("animate-wiggle");
+
         setTimeout(() => {
           if (robotRef.current) {
-            robotRef.current.classList.remove('animate-wiggle');
+            robotRef.current.classList.remove("animate-wiggle");
           }
         }, 1000);
       }
     }, 5000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
+    const aboutSection = document.getElementById("about");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-screen flex flex-col justify-center overflow-hidden py-20 pt-32"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 animated-bg -z-10"></div>
-      
+
       {/* Animated Particles */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         {[...Array(20)].map((_, i) => (
@@ -53,33 +52,40 @@ export const HeroSection = () => {
           ></div>
         ))}
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           <div className="lg:w-1/2 space-y-6 text-center lg:text-left animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground text-glow">
-              A-L-I, is Your Automated Learning Intelligence
+              A
+              <span className="bg-white mx-1 px-1 rounded text-black">
+                -L-
+              </span>
+              I, is Your Automated Learning Intelligence
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-              A-L-I, is an AI-powered robot transforming education with engaging conversations and personalized 
-              lessons for a fun, effective learning journey at home and school.
+              A-L-I, is an AI-powered robot transforming education with engaging
+              conversations and personalized lessons for a fun, effective
+              learning journey at home and school.
             </p>
           </div>
-          
+
           <div className="lg:w-1/2 flex flex-col items-center gap-8">
-            {/* Video Placeholder */}
-            <div className="w-full aspect-video bg-black/20 dark:bg-white/10 rounded-xl flex items-center justify-center border border-primary/20 overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="text-muted-foreground flex flex-col items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                  <ArrowDown className="h-8 w-8 text-primary animate-bounce" />
-                </div>
-                <p>Video will be placed here</p>
+            <div className="w-full bg-black/20 dark:bg-white/10 rounded-xl flex items-center justify-center border border-primary/20 overflow-hidden">
+              <div className="flex flex-col items-center gap-4">
+                <video
+                  src="/src/assets/AliVideo.mov"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                />
               </div>
             </div>
-            
+
             {/* Robot Animation */}
-            <div 
-              ref={robotRef} 
+            <div
+              ref={robotRef}
               className="glass-card p-8 flex items-center gap-4 transform transition-all animate-float"
             >
               <div className="relative w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
@@ -88,15 +94,17 @@ export const HeroSection = () => {
               </div>
               <div className="flex flex-col">
                 <p className="font-medium">Hello, I'm A-L-I :)</p>
-                <p className="text-sm text-muted-foreground">Your AI Learning Companion</p>
+                <p className="text-sm text-muted-foreground">
+                  Your AI Learning Companion
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Scroll Down Arrow */}
-      <div 
+      <div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce cursor-pointer"
         onClick={scrollToAbout}
       >

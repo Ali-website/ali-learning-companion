@@ -25,7 +25,7 @@ const ContactItem = ({
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 bg-secondary/30 dark:bg-background">
+    <section id="contact" className="py-5 bg-secondary/30 dark:bg-background">
       <div className="section-container">
         <h2 className="section-title animate-fade-in">
           Get in Touch
