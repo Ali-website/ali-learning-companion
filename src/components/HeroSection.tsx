@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown, Bot } from "lucide-react";
+import aliVideo from '/src/assets/AliVideo.mov';
 
 export const HeroSection = () => {
   const robotRef = useRef<HTMLDivElement>(null);
@@ -74,7 +75,7 @@ export const HeroSection = () => {
             <div className="w-full bg-black/20 dark:bg-white/10 rounded-xl flex items-center justify-center border border-primary/20 overflow-hidden">
               <div className="flex flex-col items-center gap-4">
                 <video
-                  src="/src/assets/AliVideo.mov"
+                  src={aliVideo}
                   controls
                   autoPlay
                   muted

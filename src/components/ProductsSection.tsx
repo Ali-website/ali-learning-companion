@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import appPng from "/src/assets/app.png";
+import enterprisePng from "/src/assets/enterprise.png";
+import robotPng from "/src/assets/robot.png";
+
 
 const ProductFeature = ({ text }: { text: string }) => (
   <li className="flex items-start gap-2 mb-2">
@@ -27,7 +31,7 @@ export const ProductsSection = () => {
         "Voice recognition with personalized learning paths",
         "Earnable Hikma Points to motivate progress and reward achievements",
       ],
-      image: "/src/assets/app.png",
+      image: appPng,
     },
     {
       id: "enterprise",
@@ -41,7 +45,7 @@ export const ProductsSection = () => {
         "Real-time analytics and personalized learning insights for educators",
         "Scalable deployment with school-specific branding and admin control",
       ],
-      image: "/src/assets/enterprise.png",
+      image: enterprisePng,
     },
     {
       id: "robot",
@@ -55,7 +59,7 @@ export const ProductsSection = () => {
         "Seamless integration with the Child and Enterprise apps",
         "Rechargeable docking station and SD card support",
       ],
-      image: "/src/assets/robot.png",
+      image: robotPng,
     },
   ];
 

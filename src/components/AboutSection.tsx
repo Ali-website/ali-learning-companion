@@ -1,3 +1,7 @@
+import interactiveLearningPng from "/src/assets/interactive-learning.png";
+import personalizedExperiencePng from "/src/assets/personalized-experience.png";
+
+
 const AboutCard = ({
   title,
   description,
@@ -44,13 +48,13 @@ export const AboutSection = () => {
             title="Interactive Learning"
             description="Experience a new way of learning with interactive conversations that captivate your child's interest, making education enjoyable and effective. Engage them like never before!"
             index={0}
-            src="/src/assets/interactive-learning.png"
+            src={interactiveLearningPng}
           />
           <AboutCard
             title="Personalized Experience"
             description="A-L-I adapts in real-time to your child's progress and learning style, ensuring that each lesson is tailored to their needs for optimal growth and understanding."
             index={1}
-            src="/src/assets/personalized-experience.png"
+            src={personalizedExperiencePng}
           />
         </div>
       </div>
