@@ -51,7 +51,7 @@ export const ContactSection = () => {
             <ContactItem
               icon={Linkedin}
               label="LinkedIn"
-              placeholder="Will be filled later"
+              placeholder="LinkedIn.com/company/a-l-i-companion"
               href="https://www.linkedin.com/company/a-l-i-companion/"
             />
             <ContactItem
