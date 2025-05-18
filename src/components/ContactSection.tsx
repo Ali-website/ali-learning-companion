@@ -1,17 +1,18 @@
-
 import { Mail, Linkedin, Phone } from 'lucide-react';
 
 const ContactItem = ({ 
   icon: Icon, 
   label, 
-  placeholder 
+  placeholder,
+  href
 }: { 
   icon: React.ElementType; 
   label: string; 
   placeholder: string;
+  href?: string;
 }) => {
-  return (
-    <div className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 dark:bg-secondary/10">
+  const content = (
+    <div className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 dark:bg-secondary/10 transition hover:bg-primary/10 cursor-pointer">
       <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
         <Icon className="h-5 w-5 text-primary" />
       </div>
@@ -21,6 +22,11 @@ const ContactItem = ({
       </div>
     </div>
   );
+  return href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+      {content}
+    </a>
+  ) : content;
 };
 
 export const ContactSection = () => {
@@ -39,17 +45,20 @@ export const ContactSection = () => {
             <ContactItem
               icon={Mail}
               label="Email"
-              placeholder="Will be filled later"
+              placeholder="bashar@aliaicompanion.com"
+              href="mailto:bashar@aliaicompanion.com"
             />
             <ContactItem
               icon={Linkedin}
               label="LinkedIn"
               placeholder="Will be filled later"
+              href="https://www.linkedin.com/company/a-l-i-companion/"
             />
             <ContactItem
               icon={Phone}
               label="Phone"
-              placeholder="Will be filled later"
+              placeholder="+962 79 7773 763"
+              href="tel:+962797773763"
             />
           </div>
         </div>
