@@ -78,7 +78,6 @@ export const HeroSection = () => {
                   src={aliVideo}
                   controls
                   autoPlay
-                  muted
                   loop
                 />
               </div>
